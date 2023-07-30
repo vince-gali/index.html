@@ -1,0 +1,87 @@
+:root{
+    --c-neon: rgb(3, 238, 246);
+}
+
+/* classes for button "Learn More" */
+.btn-fun{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    color: #534641;
+    background-color: #D5BBB1;
+    border: 10px solid #534641;
+    border-radius: 5px;
+
+    /* transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s; */
+
+    /* simplified version of 4 properties above vvvvvvvv */
+    transition: transform 0.3s ease 0s, background-color 0.3s, color 0.3s;
+}
+
+.btn-fun:hover{
+    transform: translateY(-10px);
+    background-color: #534641;
+    color: #D5BBB1;
+}
+
+
+
+/* Classes for sliding "slideInLeft" animation */
+@keyframes slideInLeft{
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.slideInLeft{
+    /* animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none; */
+
+    /* shortened version of classes above */
+    /* animation: slideInLeft 1s ease-in 0s 1 normal none; */
+    /* OR */
+    animation: slideInLeft 1s ease-in;
+
+    /* transform: translateX(-150px); */
+
+}
+
+
+
+
+/* classes for ambiant effects */
+/* .cube{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+} */
+
+.neon-btn{
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--c-neon);
+    border: var(--c-neon) 4px solid;
+    padding: 1rem 1em;
+    border-radius: 0.25em;
+
+    text-shadow: 
+    0 0 0.125em white,
+    0 0 0.5em var(--c-neon);
+
+    box-shadow: 
+    0 0 0.5em 0 var(--c-neon);
+
+}
